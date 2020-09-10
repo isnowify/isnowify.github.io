@@ -88,40 +88,6 @@
   };
 </script>
 
-    <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    'use strict';
-    
-      if (NexT.utils.hasMobileUA()) return;
-    
-    let time, hidden, visible, title = document.title;
-    let favicon = document.querySelector('link[rel="icon"]');
-    
-      hidden = '';
-      visible = '';
-    
-    let random = t => t[Math.floor(Math.random() * t.length)];
-    const change = () => {
-      if (document.hidden) {
-        favicon.setAttribute('href', '/images/favicon-32x32-next.png');
-        
-          document.title = hidden;
-        
-        clearTimeout(time);
-      } else {
-        favicon.setAttribute('href', '/images/favicon-32x32-next.png');
-        
-          document.title = visible;
-        
-        time = setTimeout(() => {
-          document.title = title;
-        }, 2019);
-      }
-    }
-    document.addEventListener('visibilitychange', change, false);
-  });
-</script>
-
   <title>归档 | isnowify's blog</title>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126230857-1"></script>
@@ -228,6 +194,17 @@
       
       
         
+        <li class="menu-item menu-item-西浦小猿">
+      
+    
+
+    <a href="/tags/西浦小猿/" rel="section"><i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>西浦小猿</a>
+
+  </li>
+      
+      
+      
+        
         <li class="menu-item menu-item-cloud">
       
     
@@ -257,6 +234,17 @@
     <a href="https://isnowify-kindle.herokuapp.com/" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-cog"></i> <br>Huginn</a>
 
   </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-sitemap">
+      
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
   </ul>
 
 </nav>
@@ -272,6 +260,12 @@
             
 
     
+    
+      
+      
+    
+      
+      
     
       
       
@@ -384,9 +378,34 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+        
       </div>
     
   </nav>
@@ -462,7 +481,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2014 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2014 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -471,12 +490,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">0k</span>
+    <span title="站点总字数">3k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
   <span class="post-meta-divider">|</span>
