@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+    
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+      
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: true,
+    copycode: {"enable":true,"show_result":false,"style":"flat"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: true,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpInh"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="Basic Terminology  Program – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequ">
+<meta name="keywords" content="Java,Tutorial">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An Uncomplete Guide For Java Beginner">
+<meta property="og:url" content="http://www.isnowify.com/2020/09/30/an-uncomplete-guide-for-java-beginner/index.html">
+<meta property="og:site_name" content="isnowify&#39;s blog">
+<meta property="og:description" content="Basic Terminology  Program – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequ">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-29T17:06:48.088Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="An Uncomplete Guide For Java Beginner">
+<meta name="twitter:description" content="Basic Terminology  Program – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequ">
+  <link rel="alternate" href="/atom.xml" title="isnowify's blog" type="application/atom+xml">
+  <link rel="canonical" href="http://www.isnowify.com/2020/09/30/an-uncomplete-guide-for-java-beginner/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>An Uncomplete Guide For Java Beginner | isnowify's blog</title>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126230857-1"></script>
+  <script pjax>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-126230857-1');
+    }
+  </script>
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">isnowify's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Yet another ordinary site</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-西浦小猿">
+      
+    
+
+    <a href="/tags/西浦小猿/" rel="section"><i class="menu-item-icon fa fa-fw fa-coffee"></i> <br>西浦小猿</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-cloud">
+      
+    
+
+    <a href="https://cloud.isnowify.com" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-cloud"></i> <br>Cloud</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-kindle-push">
+      
+    
+
+    <a href="https://kindle.isnowify.com" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Kindle Push</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-huginn">
+      
+    
+
+    <a href="https://isnowify-kindle.herokuapp.com/" rel="noopener" target="_blank"><i class="menu-item-icon fa fa-fw fa-cog"></i> <br>Huginn</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-sitemap">
+      
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.isnowify.com/2020/09/30/an-uncomplete-guide-for-java-beginner/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="isnowify">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="isnowify's blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">An Uncomplete Guide For Java Beginner
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-09-30 00:58:03 / 修改时间：01:06:48" itemprop="dateCreated datePublished" datetime="2020-09-30T00:58:03+08:00">2020-09-30</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>20k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>18 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="basic-terminology">Basic Terminology</h2>
+<ul>
+<li><strong>Program</strong> – a sequence of instructions (called statements), which are executed one after another in a predictable manner. Sequential flow is the most common and straightforward sequence of statements, in which statements are executed in the order that they are written – from top to bottom in a sequential manner;</li>
+<li><strong>Statement</strong> – a single action (like print a text) terminated by semi-colon (<code>;</code>);</li>
+<li><strong>Block</strong> – a group of zero, one or more statements enclosed by a pair of braces <code>{...}</code>; There are two such blocks in the program above.</li>
+<li><strong>Method</strong> – a sequence of statements that represents a high-level operation (also known as subprogram or procedure).</li>
+<li><strong>Syntax</strong> – a set of rules that define how a program needs to be written in order to be valid; Java has its own specific syntax that we will learn;</li>
+<li><strong>Keyword</strong> – a word that has a special meaning in the programming language (<code>public</code>, <code>class</code>, and many others). These words cannot be used as variable names for your own program;</li>
+<li><strong>Identifier or name</strong> – a word that refers to something in a program (such as a variable or a function name);</li>
+<li><strong>Comment</strong> – a textual explanation of what the code does. Java comments start with <code>//</code>.</li>
+<li><strong>Whitespace</strong> – all characters that are not visible (space, tab, newline, etc.).</li>
+</ul>
+<h3 id="what-do-matter-...">What Do Matter ...</h3>
+<ul>
+<li><strong>Public Class </strong>: A class can <strong>have any name</strong>, such as <code>App</code>, <code>Main</code>, or <code>Program</code>, but it <strong>must not start with a digit</strong>. A set of braces <code>{...}</code> encloses the body of a class.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Main Method</strong> : we put a method named <code>main</code> inside a class. It is the entry point for a Java program. The name of this method (<code>main</code>) is predefined and <strong>should always be the same</strong>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// statements go here</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Print</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"Hello, World!"</span>); <span class="comment">//  each statement has to end with ;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Keyword</strong> : <a href="https://en.wikipedia.org/wiki/List_of_Java_keywords" class="uri" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/List_of_Java_keywords</a></li>
+</ul>
+<h3 id="printing-data-...">Printing Data ...</h3>
+<ul>
+<li><p>The <code>println</code> method displays the passed <strong><em>string</em></strong> <strong>followed by a new line</strong> on the screen (<strong>print-line</strong>).</p></li>
+<li><p><strong>Print an empty line</strong>:</p></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(); <span class="comment">// prints empty line</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>The <code>print</code> method displays the passed <strong><em>value</em></strong> and places the cursor (the position where we display a value) after it. As an example, the code below <strong>outputs all strings in a single line</strong>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.print(<span class="string">"I "</span>);</span><br><span class="line">System.out.print(<span class="string">"know "</span>);</span><br><span class="line">System.out.print(<span class="string">"Java "</span>);</span><br><span class="line">System.out.print(<span class="string">"well."</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="declaring-and-initializing">Declaring and initializing</h3>
+<ul>
+<li><p><strong>Declaration</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataType variableName = initialization</span><br></pre></td></tr></table></figure></li>
+<li><p>The <strong>type (</strong>or <strong>data type)</strong> of a variable determines what possible operations can be performed on the variable and which values can be stored in it. Here we use a non-existing data type (<strong>DataType</strong>) to demonstrate the general form of declaration.</p></li>
+<li><p>The <strong>name (</strong>or <strong>identifier)</strong> distinguishes the variable from others. The name of a variable cannot start with a digit; it usually starts with a letter. Always try to choose meaningful and readable names for variables to make your code easy to understand.</p></li>
+<li><p>The <strong>assignment</strong> <strong>operator</strong> denoted as <code>=</code> is used to assign a single value or a result of an expression to a variable.</p></li>
+<li><p>The <strong>initialization</strong> is a value or a result of an expression that is assigned to the variable.</p>
+<p><em>Some Examples:</em></p></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String language = <span class="string">"java"</span>;</span><br><span class="line"><span class="keyword">int</span> numberOfApples = <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><p><strong>Accessing the value of a variable</strong></p>
+<p>you can only assign a value of the same type as the type of the initial variable.</p></li>
+<li><p><strong>Alternative forms of declaration</strong></p>
+<ul>
+<li><p>Declaring several variables of the same type as a single statement:</p>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String language = <span class="string">"java"</span>, version = <span class="string">"8 or newer"</span>;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>Separating declaration and initialization into statements: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> age; <span class="comment">// declaration</span></span><br><span class="line">age = <span class="number">35</span>; <span class="comment">// initialization</span></span><br></pre></td></tr></table></figure></p></li>
+</ul></li>
+<li><p><strong>What's new?</strong></p>
+<ul>
+<li><p>Type inference</p>
+<p>Since Java 10, you can write <strong>var</strong> instead of a specific type to force automatic type inference based on the type of assigned value:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> variableName = initialization;</span><br></pre></td></tr></table></figure>
+<p>Here are two examples below:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> language = <span class="string">"Java"</span>; <span class="comment">// String</span></span><br><span class="line"><span class="keyword">var</span> version = <span class="number">10</span>; <span class="comment">// int</span></span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h3 id="comments">Comments</h3>
+<ul>
+<li><p><strong>End-of-line comments</strong></p>
+<p>The java compiler ignores any text from <code>//</code> to the end of the line.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Program</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// The line below will be ignored</span></span><br><span class="line">        <span class="comment">// System.out.println("Hello, World");</span></span><br><span class="line">        <span class="comment">// It prints the string "Hello, Java"</span></span><br><span class="line">        System.out.println(<span class="string">"Hello, Java"</span>); <span class="comment">// Here can be any comment</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Multi-line comments</strong></p></li>
+</ul>
+<p>The compiler ignores any text from <code>/*</code> and the nearest <code>*/</code>. It can be used as multiple and single-line comments.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Program</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* This is a single-line comment */</span></span><br><span class="line">        <span class="comment">/*  This is an example of</span></span><br><span class="line"><span class="comment">            a multi-line comment */</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="naming">Naming</h3>
+<ul>
+<li>names are case-sensitive;</li>
+<li>a name can include <a href="https://en.wikipedia.org/wiki/Unicode" target="_blank" rel="noopener">Unicode</a> letters, digits, and two special characters (<code>$</code>, <code>_</code>);
+<ul>
+<li>Since Java 9 the single character <code>_</code> is an invalid name for a variable, but<code>_a</code> and <code>__</code> (double <code>_</code> ) are legal names.</li>
+</ul></li>
+<li>a name cannot start with a digit;</li>
+<li>a name must not be a keyword (<code>class</code>, <code>static</code>, <code>int</code> are illegal names).</li>
+</ul>
+<p><code>Note that to keep backward compatibility the word "var" can be used as a variable name even after Java 10 was released.</code></p>
+<ul>
+<li>if a variable name is a single word it should be in lowercase (for instance: <code>number</code>, <code>price</code>);</li>
+<li>if a variable name includes multiple words it should be in <code>lowerCamelCase</code>, i.e. the first word should be in lowercase and each word after the first should have its first letter written in uppercase (for instance: <code>numberOfCoins</code>);</li>
+<li>variable names should not start with <code>_</code> and <code>$</code> characters, although they are allowed;</li>
+<li>choose a name that makes sense, e.g. <code>score</code> makes more sense than <code>s</code>, although they are both valid.</li>
+</ul>
+<h2 id="standard-input-scanner">Standard Input (Scanner)</h2>
+<ul>
+<li><strong>Read single-line input</strong></li>
+</ul>
+<p>The simplest way to obtain data from the standard input is to use the standard class <strong><code>Scanner</code></strong>. It allows a program to read values of different types (string, numbers, etc) from the standard input.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Do not forget the <code>;</code> in the end of thois Statement</p>
+</blockquote>
+<p>Then construct an object of <code>Scanner</code> class.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br></pre></td></tr></table></figure>
+<p>To read the input data, use:</p>
+<ul>
+<li><p><code>scanner.next()</code> for a single word or an integer number (<em>will read the input till the whitespace</em>)</p></li>
+<li><p><code>scanner.nextLine()</code> for any string with whitespace, tab,non-printing characters or whatever</p>
+<p><em>Input will be processed as <strong>string</strong></em></p></li>
+<li><p><strong>Read multiline input</strong></p>
+<p><code>nextLine()</code> will read input from the position of the cursor till the new line (and again, if there is such a line in your input). If there is no anything left to read in the current line, the <code>nextLine()</code> method will return an empty line ("") and place the cursor at the beginning of a new line.</p></li>
+</ul>
+<p>For example, the content below will be processed by Java like this:</p>
+<p>Content:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|This is a simple</span><br><span class="line"></span><br><span class="line">multiline input,</span><br><span class="line"></span><br><span class="line">that is being read</span><br></pre></td></tr></table></figure>
+<p>Code: <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner; </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);  </span><br><span class="line"></span><br><span class="line">        String word1 = scanner.next(); <span class="comment">// "This"</span></span><br><span class="line">        String line1 = scanner.nextLine(); <span class="comment">// " is a simple" </span></span><br><span class="line">        String word2 = scanner.next(); <span class="comment">// "multiline"</span></span><br><span class="line">        String word3 = scanner.next(); <span class="comment">// "input,"</span></span><br><span class="line">        String line2 = scanner.nextLine(); <span class="comment">// "" </span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="arithmetic-operations">Arithmetic operations</h2>
+<ul>
+<li><strong>Binary arithmetic operators</strong>
+<ul>
+<li>addition <code>+</code></li>
+<li>subtraction <code>-</code></li>
+<li>multiplication <code>*</code></li>
+<li>integer division <code>/</code></li>
+<li>remainder <code>%</code></li>
+</ul></li>
+</ul>
+<p>The <code>/</code> operator returns the integer part of the division of two integer numbers, and any fractional part is discarded.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">8</span> / <span class="number">3</span>); <span class="comment">// prints 2</span></span><br><span class="line">System.out.println(<span class="number">41</span> / <span class="number">5</span>); <span class="comment">// prints 8</span></span><br></pre></td></tr></table></figure>
+<p>The <code>%</code> returns the remainder of the division of two numbers. When the dividend is less than the divisor, the quotient is zero and the remainder equals the dividend.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">10</span> % <span class="number">3</span>) <span class="comment">// prints 1, because 10 divided by 3 leaves a remainder of 1</span></span><br><span class="line">System.out.println(<span class="number">12</span> % <span class="number">4</span>) <span class="comment">// prints 0, because 12 divided by 4 leaves no remainder</span></span><br><span class="line">System.out.println(<span class="number">5</span> % <span class="number">9</span>) <span class="comment">// prints 5, because 5 divided by 9 leaves a remainder of 5</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Unary operators</strong></p>
+<ul>
+<li>The <strong>unary plus</strong> operator indicates a positive value. It's an optional operator.</li>
+</ul>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(+<span class="number">5</span>); <span class="comment">// prints 5</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>The <strong>unary minus</strong> operator negates a value or an expression.</li>
+</ul>
+<p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(-<span class="number">8</span>);  <span class="comment">// prints -8</span></span><br><span class="line">System.out.println(-(<span class="number">100</span> + <span class="number">4</span>)); <span class="comment">// prints -104</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Precedence Order</strong></p>
+<ul>
+<li>parentheses</li>
+<li>unary plus/minus</li>
+<li>multiplication, division</li>
+<li>addition, subtraction</li>
+</ul></li>
+</ul>
+<h2 id="integer-types-and-operations">Integer types and operations</h2>
+<p>If a number ends with the letter <code>L</code> or <code>l</code> it is considered as <code>long</code>, otherwise, it is <code>int</code>. It is recommended to use the uppercase letter <code>L</code>.</p>
+<p>Use <code>=</code>, <code>/=</code>, <code>%=</code> <code>+=</code> to make operation concise</p>
+<ul>
+<li><p>Read numbers from standard input</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> a = scanner.nextInt();</span><br><span class="line">        <span class="keyword">int</span> b = scanner.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum = a + b;</span><br><span class="line"></span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>long</code> can be used in replace of <code>int</code>.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> a = scanner.nextLong();</span><br><span class="line"><span class="keyword">long</span> b = scanner.nextLong();</span><br><span class="line"><span class="keyword">long</span> sum = a + b;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="increment-and-decrement">Increment and decrement</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>;</span><br><span class="line">n++; <span class="comment">// 11</span></span><br><span class="line">n--; <span class="comment">// 10</span></span><br><span class="line"><span class="comment">//------------//</span></span><br><span class="line"> <span class="keyword">int</span> n = <span class="number">10</span>;</span><br><span class="line">n += <span class="number">1</span>; <span class="comment">// 11</span></span><br><span class="line">n -= <span class="number">1</span>; <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>prefix</strong> (<code>++n</code> or <code>--n</code>) increases/decreases the value of a variable before it is used;</p></li>
+<li><p><strong>postfix</strong> (<code>n++</code> or <code>n--</code>) increases/decreases the value of a variable after it is used.</p></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> b = ++a;</span><br><span class="line"><span class="comment">// ++a = a = 5</span></span><br><span class="line">System.out.println(a); <span class="comment">// 5</span></span><br><span class="line">System.out.println(b); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>The value of a has been <strong>incremented</strong> and <strong>then assigned</strong> to b. So, b is 5.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> b = a++;</span><br><span class="line"><span class="comment">// a++ = 4; a = 5</span></span><br><span class="line">System.out.println(a); <span class="comment">// 5</span></span><br><span class="line">System.out.println(b); <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Postfix</strong> operator has <em>higher precedence</em> than the <strong>assignment operator</strong>.</p>
+</blockquote>
+<p>When assigning <code>a++</code> to <code>b</code>, we actually assign 4, while <code>a</code> itself has already been incremented. So, <code>b</code> is 4 and <code>a</code> is 5.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">4</span>;</span><br><span class="line">System.out.println(a++ + a); <span class="comment">// this is 9</span></span><br></pre></td></tr></table></figure>
+<h2 id="characters">Characters</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> lowerCaseLetter = <span class="string">'a'</span>;</span><br><span class="line"><span class="keyword">char</span> upperCaseLetter = <span class="string">'Q'</span>;</span><br><span class="line"><span class="keyword">char</span> number = <span class="string">'1'</span>;</span><br><span class="line"><span class="keyword">char</span> space = <span class="string">' '</span>;</span><br><span class="line"><span class="keyword">char</span> dollar = <span class="string">'$'</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Initializing with unicode</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">'\u0040'</span>; <span class="comment">// it represents '@'</span></span><br><span class="line">System.out.println(ch); <span class="comment">// @</span></span><br></pre></td></tr></table></figure>
+<p>Any <code>char</code> variable may be considered as an unsigned integer value in the range from 0 to 65535.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="number">64</span>;</span><br><span class="line">System.out.println(ch); <span class="comment">// @</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Subsequent characters</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">'b'</span>;</span><br><span class="line">ch += <span class="number">1</span>; <span class="comment">// 'c'</span></span><br><span class="line">ch -= <span class="number">2</span>; <span class="comment">// 'a'</span></span><br><span class="line"><span class="comment">// --------------------- //</span></span><br><span class="line"><span class="keyword">char</span> ch = <span class="string">'A'</span>;</span><br><span class="line">ch += <span class="number">10</span>;</span><br><span class="line">System.out.println(ch);   <span class="comment">// 'K'</span></span><br><span class="line">System.out.println(++ch); <span class="comment">// 'L'</span></span><br><span class="line">System.out.println(++ch); <span class="comment">// 'M'</span></span><br><span class="line">System.out.println(--ch); <span class="comment">// 'L'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>Escape sequences</strong></p>
+<ul>
+<li><code>'\n'</code> is the newline character;</li>
+<li><code>'\t'</code> is the tab character;</li>
+<li><code>'\r'</code> is the carriage return character;</li>
+<li><code>'\\'</code> is the backslash character itself;</li>
+<li><code>'\''</code> is the single quote mark;</li>
+<li><code>'\"'</code> is the double quote mark.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.print(<span class="string">'\t'</span>); <span class="comment">// makes a tab</span></span><br><span class="line">System.out.print(<span class="string">'a'</span>);  <span class="comment">// prints 'a'</span></span><br><span class="line">System.out.print(<span class="string">'\n'</span>); <span class="comment">// goes to the new line</span></span><br><span class="line">System.out.print(<span class="string">'c'</span>);  <span class="comment">// prints 'c'</span></span><br></pre></td></tr></table></figure>
+<p>Code above will be phrased as :</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  a</span><br><span class="line">c</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+<h2 id="string">String</h2>
+<ul>
+<li><p><strong>immutable type</strong>: it's <strong><em>impossible</em></strong> to change a character in a string;</p></li>
+<li><p>it has methods for getting individual characters and extracting substrings;</p></li>
+<li><p>individual characters can be accessed by indexes, the first character has the index <strong>0</strong>, the last one – <strong>the length of the string</strong> – <strong>1</strong>;</p></li>
+<li><p>non-primitive type.</p></li>
+<li><p>A string can be <code>null</code>. It means no value assigned.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String nullString = <span class="keyword">null</span>; <span class="comment">// it is null</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Another way to create a variable of String is by using the keyword new.</p></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="keyword">new</span> String(<span class="string">"my-string"</span>); <span class="comment">// it creates an object and assigns it to the variable</span></span><br></pre></td></tr></table></figure>
+<h3 id="methods">Methods</h3>
+<p>Documentation <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" target="_blank" rel="noopener">here</a>.</p>
+<p>Any string has two useful methods:</p>
+<ul>
+<li><code>length()</code> returns the number of characters in the string;</li>
+<li><code>charAt(int index)</code> returns a character by its index;</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"Hi, all"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> len = s.length(); <span class="comment">// the len is 7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> theFirstChar = s.charAt(<span class="number">0</span>);  <span class="comment">// 'H' has the index 0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> theFifthChar = s.charAt(<span class="number">4</span>); <span class="comment">// 'a' has the index 4</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>isEmpty()</code> returns <code>true</code> if the string is empty, otherwise – <code>false</code>;</li>
+<li><code>toUpperCase()</code> returns a new string in uppercase;</li>
+<li><code>toLowerCase()</code> returns a new string in lowercase;</li>
+<li><code>startsWith(prefix)</code> returns <code>true</code> if the string starts with the given string prefix, otherwise, <code>false</code>;</li>
+<li><code>endsWith(suffix)</code> returns <code>true</code> if the string ends with the given string suffix, otherwise, <code>false</code>.</li>
+<li><code>contains(...)</code> returns <code>true</code> if the string contains the given string or character;</li>
+<li><code>substring(beginIndex, endIndex)</code> returns a substring of the string in the range: <code>beginIndex</code>, <code>endIndex - 1</code>;</li>
+<li><code>replace(old, new)</code> returns a new string obtained by replacing all occurrences of <code>old</code> with <code>new</code> that can be chars or strings.</li>
+<li><code>trim()</code> returns a copy of the string obtained by omitting the leading and trailing whitespace. Note that whitespace includes not only space character, but mostly everything that looks empty: tab, carriage return, newline character, etc.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">String text = <span class="string">"The simple text string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">boolean</span> empty = text.isEmpty(); <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">String textInUpperCase = text.toUpperCase(); <span class="comment">// "THE SIMPLE TEXT STRING"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">boolean</span> startsWith = textInUpperCase.startsWith(<span class="string">"THE"</span>); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* replace all whitespaces with empty strings */</span></span><br><span class="line">String noWhitespaces = textInUpperCase.replace(<span class="string">" "</span>, <span class="string">""</span>); <span class="comment">// "THESIMPLETEXTSTRING"</span></span><br><span class="line"></span><br><span class="line">String textWithWhitespaces = <span class="string">"\t text with whitespaces   !\n  \t"</span>;</span><br><span class="line"></span><br><span class="line">String trimmedText = textWithWhitespaces.trim(); <span class="comment">// "text with whitespaces   !"</span></span><br></pre></td></tr></table></figure>
+<h3 id="concatenation">Concatenation</h3>
+<p>Two strings can be concatenated using the "+" operator or the <code>concat</code> method.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String firstName = <span class="string">"John"</span>;</span><br><span class="line">String lastName = <span class="string">"Smith"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// concatenation using the "+" operator</span></span><br><span class="line">String fullName1 = firstName + <span class="string">" "</span> + lastName; <span class="comment">// "John Smith"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// concatenation using the concat method </span></span><br><span class="line">String fullName2 = firstName.concat(<span class="string">" "</span>).conc</span><br></pre></td></tr></table></figure>
+<h3 id="append">Append</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str = <span class="string">"str"</span> + <span class="number">10</span> + <span class="keyword">false</span>; <span class="comment">// the result is "str10false"</span></span><br><span class="line"><span class="comment">// Will be converted into String</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String shortString = <span class="string">"str"</span>;</span><br><span class="line"><span class="keyword">int</span> number = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">String result1 = shortString + number + <span class="number">50</span>; <span class="comment">// the result is "str10050"</span></span><br><span class="line">String result2 = number + <span class="number">50</span> + shortString; <span class="comment">// the result is "150str"</span></span><br></pre></td></tr></table></figure>
+<h3 id="compare">Compare</h3>
+<blockquote>
+<p>only addresses will be compared, but not actual values.</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">String first = <span class="string">"first"</span>;</span><br><span class="line">String second = <span class="string">"second"</span>;</span><br><span class="line"></span><br><span class="line">String anotherFirst = <span class="string">"first"</span>;</span><br><span class="line">String secondInUpperCase = <span class="string">"SECOND"</span>;</span><br><span class="line"></span><br><span class="line">System.out.println(first.equals(second)); <span class="comment">// false, the strings have different values</span></span><br><span class="line">System.out.println(first.equals(anotherFirst)); <span class="comment">// true, the strings have the same value</span></span><br><span class="line"></span><br><span class="line">System.out.println(second.equals(secondInUpperCase)); <span class="comment">// false, the strings have different cases</span></span><br><span class="line">System.out.println(second.equalsIgnoreCase(secondInUpperCase)); <span class="comment">// true, it ignores cases</span></span><br></pre></td></tr></table></figure>
+<h2 id="logical-operators">Logical operators</h2>
+<ul>
+<li><strong>NOT</strong> is a unary operator that reverses the Boolean value. It is denoted as <code>!</code>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> f = <span class="keyword">false</span>; <span class="comment">// f is false</span></span><br><span class="line"><span class="keyword">boolean</span> t = !f;    <span class="comment">// t is true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>AND</strong> is a binary operator that returns <code>true</code> if both operands are <code>true</code>, otherwise, it is <code>false</code>. It is denoted as <code>&amp;&amp;</code>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> b1 = <span class="keyword">false</span> &amp;&amp; <span class="keyword">false</span>; <span class="comment">// false</span></span><br><span class="line"><span class="keyword">boolean</span> b2 = <span class="keyword">false</span> &amp;&amp; <span class="keyword">true</span>;  <span class="comment">// false</span></span><br><span class="line"><span class="keyword">boolean</span> b3 = <span class="keyword">true</span> &amp;&amp; <span class="keyword">false</span>;  <span class="comment">// false</span></span><br><span class="line"><span class="keyword">boolean</span> b4 = <span class="keyword">true</span> &amp;&amp; <span class="keyword">true</span>;   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>OR</strong> is a binary operator that returns <code>true</code> if at least one operand is <code>true</code>, otherwise, it returns <code>false</code>. It is denoted as <code>||</code>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> b1 = <span class="keyword">false</span> || <span class="keyword">false</span>; <span class="comment">// false</span></span><br><span class="line"><span class="keyword">boolean</span> b2 = <span class="keyword">false</span> || <span class="keyword">true</span>;  <span class="comment">// true</span></span><br><span class="line"><span class="keyword">boolean</span> b3 = <span class="keyword">true</span> || <span class="keyword">false</span>;  <span class="comment">// true</span></span><br><span class="line"><span class="keyword">boolean</span> b4 = <span class="keyword">true</span> || <span class="keyword">true</span>;   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>XOR</strong> (<strong>exclusive OR</strong>) is a binary operator that returns <code>true</code> if boolean operands <strong><em>have different values</em></strong>, otherwise, it is <code>false</code>.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> b1 = <span class="keyword">false</span> ^ <span class="keyword">false</span>; <span class="comment">// false</span></span><br><span class="line"><span class="keyword">boolean</span> b2 = <span class="keyword">false</span> ^ <span class="keyword">true</span>;  <span class="comment">// true</span></span><br><span class="line"><span class="keyword">boolean</span> b3 = <span class="keyword">true</span> ^ <span class="keyword">false</span>;  <span class="comment">// true</span></span><br><span class="line"><span class="keyword">boolean</span> b4 = <span class="keyword">true</span> ^ <span class="keyword">true</span>;   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>The <strong>XOR</strong> operator is used less often than others. Just remember that Java has it. If you really need it, you can use it.</p>
+<blockquote>
+<p>Priority: <code>!</code> (NOT) &gt; <code>^</code> (XOR) &gt; <code>&amp;&amp;</code> (AND) &gt; <code>||</code> (OR).</p>
+</blockquote>
+<h2 id="relational-operators">Relational operators</h2>
+<ul>
+<li><code>==</code> (equal to)</li>
+<li><code>!=</code> (not equal to)</li>
+<li><code>&gt;</code> (greater than)</li>
+<li><code>&gt;=</code> (greater than or equal to)</li>
+<li><code>&lt;</code> (less than)</li>
+<li><code>&lt;=</code> (less than or equal to)</li>
+</ul>
+<blockquote>
+<p>Priority: Logical operators &lt; Relational operators &lt; arithmetic operators.</p>
+</blockquote>
+<h2 id="conditional-statement">Conditional Statement</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (b) &#123; <span class="comment">// or !b  (Condiction in the bracket is true)</span></span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ternary-operator">Ternary operator</h2>
+<p>Conditional Statement:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = ...;</span><br><span class="line"><span class="keyword">int</span> b = ...;</span><br><span class="line"><span class="keyword">int</span> max = ...;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">    max = a;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    max = b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Ternary Operator:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> max = a &gt; b ? a : b;</span><br></pre></td></tr></table></figure>
+<p>that is to say:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = condition ? trueCase : elseCase;</span><br></pre></td></tr></table></figure>
+<p>Another sample to judge even or odd number:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num = ...;  <span class="comment">// it's initialized by a value</span></span><br><span class="line">System.out.println(num % <span class="number">2</span> == <span class="number">0</span> ? <span class="string">"even"</span> : <span class="string">"odd"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="for-loop">For-loop</h2>
+<p>Basic framework:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (initialization; condition; modification) &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>initialization statement</strong> is executed once before the loop begins; usually, loop variables are initialized here;</li>
+<li><strong>condition</strong> is a Boolean expression that determines the need for the next iteration; if it's <code>false</code>, the loop terminates;</li>
+<li><strong>modification</strong> is a statement that changes the value of the loop variables; it is <strong><em>invoked after each iteration</em></strong> of the loop; usually, it uses <strong>increment or</strong> <strong>decrement</strong> to modify the loop's variable.</li>
+</ul>
+</blockquote>
+<p>it is also possible to write an infinite loop without these parts at all:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (;;) &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>An example...</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">        System.out.print(i * j + <span class="string">"\t"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Which will print:</p>
+<blockquote>
+<p>1 2 3 4 5 6 7 8 9 2 4 6 8 10 12 14 16 18 3 6 9 12 15 18 21 24 27 4 8 12 16 20 24 28 32 36 5 10 15 20 25 30 35 40 45 6 12 18 24 30 36 42 48 54 7 14 21 28 35 42 49 56 63 8 16 24 32 40 48 56 64 72 9 18 27 36 45 54 63 72 81</p>
+</blockquote>
+<h2 id="switch-statement">Switch Statement</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (variable) &#123;</span><br><span class="line">    <span class="keyword">case</span> value1:</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> value2:</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//... other cases</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">case</span> valueN:</span><br><span class="line">        <span class="comment">// do something here</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="comment">// do something by default</span></span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">// it can be omitted</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>An example: </code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> val = ...;</span><br><span class="line"><span class="keyword">switch</span> (val) &#123;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">         System.out.println(<span class="string">"zero"</span>);</span><br><span class="line">         <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">         System.out.println(<span class="string">"one"</span>);</span><br><span class="line">         <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">         System.out.println(<span class="string">"two"</span>);</span><br><span class="line">         <span class="keyword">break</span>;</span><br><span class="line">     <span class="keyword">default</span>:</span><br><span class="line">         System.out.println(<span class="string">"The value is less than zero or greater than two"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>It is highly recommended to add a <code>break</code> after each case.</p>
+<p>If a case meets the according condition, the following case will be executed directly from the entry point without judgement</p>
+<p>Since Java 14, switch can be treated as an expression, returning a value from the statement. To achieve that a new switch<strong>-</strong>related keyword <strong>yield</strong> was introduced which works as a <strong>return</strong> statement.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> count = <span class="keyword">switch</span> (day) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"Monday"</span>:</span><br><span class="line">        yield <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"Tuesday"</span>:</span><br><span class="line">        yield <span class="number">2</span>;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        yield -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="unit-of-information">Unit of information</h2>
+<p>The smallest unit of information is the <strong>bit</strong> <strong>(b)</strong>. <code>1</code> and <code>0</code>.</p>
+<p>A <strong>byte</strong> <strong>(B)</strong> means <strong>8 bits</strong></p>
+<p><strong>bit numbers</strong> use the lowercase letter <strong>"b"</strong> while the <strong>bytes</strong> are capital <strong>"B"</strong>.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>SI metric</strong></th>
+<th><strong>Symbol</strong></th>
+<th><strong>Powers of ten</strong></th>
+<th><strong>IEC metric</strong></th>
+<th><strong>Symbol</strong></th>
+<th><strong>Powers of two</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kilobyte</td>
+<td>kB</td>
+<td>10^3 B (1000 B)</td>
+<td>Kibibyte</td>
+<td>KiB</td>
+<td>2^10 B (or 1024 B)</td>
+</tr>
+<tr class="even">
+<td>Megabyte</td>
+<td>MB</td>
+<td>10^6 B (1000 kB)</td>
+<td>Mebibyte</td>
+<td>MiB</td>
+<td>2^20 B (or 1024 KiB)</td>
+</tr>
+<tr class="odd">
+<td>Gigabyte</td>
+<td>GB</td>
+<td>10^9 B (1000 MB)</td>
+<td>Gibibyte</td>
+<td>GiB</td>
+<td>2^30 B (or 1024 MiB)</td>
+</tr>
+<tr class="even">
+<td>Terabyte</td>
+<td>TB</td>
+<td>10^12 B (1000 GB)</td>
+<td>Tebibyte</td>
+<td>TiB</td>
+<td>2^40 B (or 1024 GiB)</td>
+</tr>
+<tr class="odd">
+<td>Petabyte</td>
+<td>PB</td>
+<td>10^15 B (1000 TB)</td>
+<td>Pebibyte</td>
+<td>PiB</td>
+<td>2^50 B (or 1024 TiB)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datatype-in-java-number">Datatype in Java (number)</h3>
+<ul>
+<li><code>byte</code>: size 8 bits (1 byte), range from -128 to 127</li>
+<li><code>short</code>: size 16 bits (2 bytes), range from -32768 to 32767</li>
+<li><code>int</code>: size 32 bits (4 bytes), range from −(231) to (231)−1</li>
+<li><code>long</code>: size 64 bits (8 bytes), range from −(263) to (263)−1</li>
+<li><strong>Floating-point types</strong>： <code>double</code> (64 bits) and <code>float</code> (32 bits).</li>
+</ul>
+<p>Note, that when we declare and initialize a <code>float</code> variable, we should mark the assigned value with the special letter <strong>f</strong>. It is often a good practice to mark a <code>long</code> value with <strong>l</strong> as well.</p>
+<h2 id="casting">Casting</h2>
+<h3 id="implicit-casting">Implicit casting</h3>
+<p>Transformation will be automatically completed by compiler and there is no loss <strong>in most cases</strong> when transforming.</p>
+<p>The direction of implicit casting:</p>
+<figure>
+<img alt="img" data-src="https://ucarecdn.com/c00fb67e-ba08-44a2-ad8b-0ffbdfe8d642/"><figcaption aria-hidden="true">img</figcaption>
+</figure>
+<ul>
+<li>from <code>int</code> to <code>long</code>:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">long</span> bigNum = num; <span class="comment">// 100L</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>from <code>long</code> to <code>double</code>:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> bigNum = <span class="number">100_000_000L</span>;</span><br><span class="line"><span class="keyword">double</span> bigFraction = bigNum; <span class="comment">// 100000000.0</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>from <code>short</code> to <code>int</code>:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> shortNum = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> num = shortNum; <span class="comment">// 100</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>from <code>char</code> to <code>int</code>: (Will get the ASCII code of the according character)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> ch = <span class="string">'?'</span>;</span><br><span class="line"><span class="keyword">int</span> code = ch; <span class="comment">// 63</span></span><br></pre></td></tr></table></figure>
+<p>However, the <strong>loss</strong> could exist in some cases: <code>int</code> to <code>float</code>, or a <code>long</code> to <code>float</code> nor to <code>double</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> bigLong =  <span class="number">1_200_000_002L</span>;</span><br><span class="line"><span class="keyword">float</span> bigFloat = bigLong; <span class="comment">// 1.2E9 (= 1_200_000_000)</span></span><br></pre></td></tr></table></figure>
+<h3 id="explicit-casting">Explicit casting</h3>
+<p>Usage:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(targetType) source</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> d = <span class="number">2.00003</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// it loses the fractional part</span></span><br><span class="line"><span class="keyword">long</span> l =  (<span class="keyword">long</span>) d; <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// requires explicit casting because long is wider than int</span></span><br><span class="line"><span class="keyword">int</span> i = (<span class="keyword">int</span>) l; <span class="comment">// 2 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// requires explicit casting because the result is long (indicated by L)</span></span><br><span class="line"><span class="keyword">int</span> val = (<span class="keyword">int</span>) (<span class="number">3</span> + <span class="number">2L</span>); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// casting from a long literal to char</span></span><br><span class="line"><span class="keyword">char</span> ch = (<span class="keyword">char</span>) <span class="number">55L</span>; <span class="comment">// '7'</span></span><br></pre></td></tr></table></figure>
+<h2 id="branching-statements">Branching Statements</h2>
+<h3 id="break-statement"><code>Break</code> Statement</h3>
+<ul>
+<li>it terminates the current loop of any type (<strong>for</strong>, <strong>while</strong>, <strong>do-while</strong>);</li>
+<li>it terminates a case in the <strong>switch</strong> statement (if-else);</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">while</span> (<span class="keyword">true</span>) &#123; <span class="comment">// the condition to continue the loop</span></span><br><span class="line">    <span class="keyword">if</span> (i == <span class="number">0</span>) &#123; <span class="comment">// the condition to perform break that stops this loop </span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    i--;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Another trick using <code>break</code> to print pyramid:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">        System.out.print(j + <span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span> (i == j) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The output will be printed like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0 </span><br><span class="line">0 1 </span><br><span class="line">0 1 2 </span><br><span class="line">0 1 2 3 </span><br><span class="line">0 1 2 3 4 </span><br><span class="line">0 1 2 3 4 5 </span><br><span class="line">0 1 2 3 4 5 6 </span><br><span class="line">0 1 2 3 4 5 6 7 </span><br><span class="line">0 1 2 3 4 5 6 7 8 </span><br><span class="line">0 1 2 3 4 5 6 7 8 9</span><br></pre></td></tr></table></figure>
+<h3 id="continue-statement"><code>Continue</code> statement</h3>
+<p>It causes a loop to <strong>skip</strong> the current iteration and go to the <strong>next one</strong>.</p>
+<ul>
+<li>inside the <strong>for-loop</strong>, the continue causes control to immediately move to the increment/decrement statement;</li>
+<li>inside the <strong>while</strong> or <strong>do-while loop</strong>, control immediately moves to the condition.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i % <span class="number">2</span> != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.print(i + <span class="string">" "</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The output will be like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 2 4 6 8</span><br></pre></td></tr></table></figure>
+<p>Which is in fact another realization of the counter condition:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123; </span><br><span class="line">    <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">" "</span>);</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>An interesting code for practice:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">    <span class="keyword">if</span> (i &lt; <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) &#123;</span><br><span class="line">            System.out.println(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The visualized result can be accessed below:</p>
+<p><a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+main%7B%0A+++public+static+void+main(String%5B%5D+args)%7B%0A+++for+(int+i+%3D+0%3B+i+%3C+5%3B+i%2B%2B)+%7B%0A++++System.out.println(i)%3B%0A++++if+(i+%3C+3)+%7B%0A++++++++continue%3B%0A++++%7D+else+%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+5%3B+j%2B%2B)+%7B%0A++++++++++++System.out.println(j)%3B%0A++++++++%7D%0A++++%7D++++++++%0A%7D%7D%0A%7D&amp;mode=display&amp;curInstr=61" class="uri" target="_blank" rel="noopener">https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+main%7B%0A+++public+static+void+main(String%5B%5D+args)%7B%0A+++for+(int+i+%3D+0%3B+i+%3C+5%3B+i%2B%2B)+%7B%0A++++System.out.println(i)%3B%0A++++if+(i+%3C+3)+%7B%0A++++++++continue%3B%0A++++%7D+else+%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+5%3B+j%2B%2B)+%7B%0A++++++++++++System.out.println(j)%3B%0A++++++++%7D%0A++++%7D++++++++%0A%7D%7D%0A%7D&amp;mode=display&amp;curInstr=61</a></p>
+<h2 id="defining-methods">Defining methods</h2>
+<p>A method has.... (<strong>bolded</strong> elements are compulsory)</p>
+<ol type="1">
+<li><strong>a set of modifiers</strong> (<code>public</code>, <code>static</code>, etc.);</li>
+<li>a type of the return value;</li>
+<li><strong>a name;</strong></li>
+<li>a list of parameters (as well known as formal parameters) in parenthesis <code>()</code>;</li>
+<li>a list of exceptions;</li>
+<li><strong>a body</strong> containing statements to perform the operation.</li>
+</ol>
+<p>An example:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The combination of the <strong>name</strong> of a method and its <strong>parameter types</strong> is called the <strong>signature</strong>. It doesn't include the returning type, modifiers, and names of parameters.</p>
+<p>The considered method <code>sum</code> has the following signature <code>sum(int, int)</code>.</p>
+<h3 id="naming-methods">Naming Methods</h3>
+<p>a method name should be a <strong>legal identifier</strong> with following attributes:</p>
+<ul>
+<li>identifiers are case-sensitive;</li>
+<li>an identifier can include Unicode letters, digits, and two special characters (<code>$</code>,<code>_</code>);</li>
+<li>an identifier can't start with a digit;</li>
+<li>identifiers must not be a keyword.</li>
+</ul>
+<h3 id="setting-returning-value-type-and-parameters">Setting returning value type and parameters</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printSum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    System.out.println(a + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The code above prints the sum and returns no value due to <code>void</code>.</p>
+<p>When you call a method with a value of <strong>a primitive type</strong> then a <strong>copy</strong> of the value is created. Inside a method, you can process this copy. If you change it, the passed argument is <strong>not changed.</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val = <span class="number">100</span>; <span class="comment">// 100</span></span><br><span class="line">    change(val); <span class="comment">// try to change val</span></span><br><span class="line">    System.out.println(val); <span class="comment">// it prints "100", because the method didn't change val, only its copy</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The method changes the given value</span></span><br><span class="line"><span class="comment"> */</span> </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">    val = <span class="number">400</span>; <span class="comment">// here, the copy is 400</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/Tutorial/" rel="tag"><i class="fa fa-tag"></i> Tutorial</a>
+          
+        </div>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+              <a href="/2020/09/17/a-simple-guide-to-install-homebrew/" rel="next" title="Homebrew 安装不完全指北">
+                <i class="fa fa-chevron-left"></i> Homebrew 安装不完全指北
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+          </div>
+        </div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/1.jpg"
+      alt="isnowify">
+  <p class="site-author-name" itemprop="name">isnowify</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/jdwsxs" title="GitHub &rarr; https://github.com/jdwsxs" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:webmaster@isnowify.com" title="E-Mail &rarr; mailto:webmaster@isnowify.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://twitter.com/isnowify" title="Twitter &rarr; https://twitter.com/isnowify" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://t.me/isnowify" title="Telegram &rarr; https://t.me/isnowify" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Telegram</a>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-terminology"><span class="nav-number">1.</span> <span class="nav-text">Basic Terminology</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#what-do-matter-..."><span class="nav-number">1.1.</span> <span class="nav-text">What Do Matter ...</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#printing-data-..."><span class="nav-number">1.2.</span> <span class="nav-text">Printing Data ...</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#declaring-and-initializing"><span class="nav-number">1.3.</span> <span class="nav-text">Declaring and initializing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comments"><span class="nav-number">1.4.</span> <span class="nav-text">Comments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#naming"><span class="nav-number">1.5.</span> <span class="nav-text">Naming</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#standard-input-scanner"><span class="nav-number">2.</span> <span class="nav-text">Standard Input (Scanner)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arithmetic-operations"><span class="nav-number">3.</span> <span class="nav-text">Arithmetic operations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#integer-types-and-operations"><span class="nav-number">4.</span> <span class="nav-text">Integer types and operations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#increment-and-decrement"><span class="nav-number">5.</span> <span class="nav-text">Increment and decrement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#characters"><span class="nav-number">6.</span> <span class="nav-text">Characters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#string"><span class="nav-number">7.</span> <span class="nav-text">String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#methods"><span class="nav-number">7.1.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#concatenation"><span class="nav-number">7.2.</span> <span class="nav-text">Concatenation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#append"><span class="nav-number">7.3.</span> <span class="nav-text">Append</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#compare"><span class="nav-number">7.4.</span> <span class="nav-text">Compare</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logical-operators"><span class="nav-number">8.</span> <span class="nav-text">Logical operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#relational-operators"><span class="nav-number">9.</span> <span class="nav-text">Relational operators</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conditional-statement"><span class="nav-number">10.</span> <span class="nav-text">Conditional Statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ternary-operator"><span class="nav-number">11.</span> <span class="nav-text">Ternary operator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-loop"><span class="nav-number">12.</span> <span class="nav-text">For-loop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch-statement"><span class="nav-number">13.</span> <span class="nav-text">Switch Statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unit-of-information"><span class="nav-number">14.</span> <span class="nav-text">Unit of information</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#datatype-in-java-number"><span class="nav-number">14.1.</span> <span class="nav-text">Datatype in Java (number)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#casting"><span class="nav-number">15.</span> <span class="nav-text">Casting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#implicit-casting"><span class="nav-number">15.1.</span> <span class="nav-text">Implicit casting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#explicit-casting"><span class="nav-number">15.2.</span> <span class="nav-text">Explicit casting</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#branching-statements"><span class="nav-number">16.</span> <span class="nav-text">Branching Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#break-statement"><span class="nav-number">16.1.</span> <span class="nav-text">Break Statement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continue-statement"><span class="nav-number">16.2.</span> <span class="nav-text">Continue statement</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#defining-methods"><span class="nav-number">17.</span> <span class="nav-text">Defining methods</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#naming-methods"><span class="nav-number">17.1.</span> <span class="nav-text">Naming Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setting-returning-value-type-and-parameters"><span class="nav-number">17.2.</span> <span class="nav-text">Setting returning value type and parameters</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2014 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">isnowify</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">26k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a></div>
+
+        
+<div class="busuanzi-count">
+  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+
+  
+
+  
+    
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+  
+
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', function() {
+    window.dsqjs = new DisqusJS({
+      api: 'https://disqusjs.skk.moe/' || 'https://disqus.com/api/',
+      apikey: 'Eld8SkINSlrQzBUz2ye1a1P9cWdOJ3d9H8Wj1XEIUoncilM1TP6yH3ynOQMdWFde',
+      shortname: 'isnowify',
+      url: "http://www.isnowify.com/2020/09/30/an-uncomplete-guide-for-java-beginner/",
+      identifier: "2020/09/30/an-uncomplete-guide-for-java-beginner/",
+      title: 'An Uncomplete Guide For Java Beginner',
+    });
+  }, window.DisqusJS);
+</script>
+
+    </div>
+    <script>
+var pjax = new Pjax({
+  selectors: [
+    'title',
+    '#page-configurations',
+    '.content-wrap',
+    '.sidebar-inner',
+    '#pjax'
+  ],
+  switches: {
+    '.sidebar-inner': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo: !CONFIG.save_scroll
+});
+$(document).on('pjax:send', function() {
+  $('.sidebar-inner').stop().fadeTo('fast', 0);
+  CONFIG.save_scroll && clearInterval(NexT.utils.saveScrollTimer);
+});
+$(document).on('pjax:success', function() {
+  $('script[pjax], script#page-configurations, #pjax script').each(function(i, o) {
+    $(o).parent().append($(o).remove());
+  });
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  $('.sidebar-inner .motion-element').css('opacity', 1);
+  $('.sidebar-inner').fadeTo('fast', 1);
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+</body>
+</html>
